@@ -399,6 +399,7 @@ object LevelCatalog {
     fun getTournamentLevels(): List<LevelConfig> = allLevels.filter { it.gameMode == GameMode.TOURNAMENT }
     fun getCareerLevels(): List<LevelConfig> = allLevels.filter { it.gameMode == GameMode.CAREER }
     fun getChallengeLevels(): List<LevelConfig> = allLevels.filter { it.gameMode == GameMode.CHALLENGE }
+    fun getLevelsForMode(mode: ShootingMode): List<LevelConfig> = allLevels.filter { it.shootingMode == mode }
 
     fun createPracticeSession(mode: ShootingMode): LevelConfig = LevelConfig(
         levelNumber = 0,
