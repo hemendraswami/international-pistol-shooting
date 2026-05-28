@@ -5,6 +5,7 @@ import android.media.AudioAttributes
 import android.media.AudioManager
 import android.media.SoundPool
 import android.os.Build
+import com.pistolshooting.R
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -65,6 +66,16 @@ class GameAudioManager @Inject constructor(
         // Sounds are loaded from res/raw/*.ogg
         // Entries here map SoundType to resource names for future asset integration.
         // When assets are added, replace with: soundIds[SoundType.X] = soundPool?.load(context, R.raw.sound_name, 1) ?: -1
+        soundIds[SoundType.PISTOL_FIRE] = soundPool?.load(context, R.raw.pistol_fire, 1) ?: -1
+        soundIds[SoundType.BULLET_IMPACT_BULLSEYE] = soundPool?.load(context, R.raw.bullet_impact_bullseye, 1) ?: -1
+        soundIds[SoundType.BULLET_IMPACT_RING] = soundPool?.load(context, R.raw.bullet_impact_ring, 1) ?: -1
+        soundIds[SoundType.BULLET_MISS] = soundPool?.load(context, R.raw.bullet_miss, 1) ?: -1
+        soundIds[SoundType.WIND_AMBIENT] = soundPool?.load(context, R.raw.wind_ambient, 1) ?: -1
+        soundIds[SoundType.AUDIENCE_AMBIENT] = soundPool?.load(context, R.raw.audience_ambient, 1) ?: -1
+        soundIds[SoundType.MEDAL_GOLD] = soundPool?.load(context, R.raw.medal_gold, 1) ?: -1
+        soundIds[SoundType.MEDAL_SILVER] = soundPool?.load(context, R.raw.medal_silver, 1) ?: -1
+        soundIds[SoundType.MEDAL_BRONZE] = soundPool?.load(context, R.raw.medal_bronze, 1) ?: -1
+        soundIds[SoundType.UI_CLICK] = soundPool?.load(context, R.raw.ui_click, 1) ?: -1
     }
 
     fun playSound(type: SoundType, volumeScale: Float = 1f) {
