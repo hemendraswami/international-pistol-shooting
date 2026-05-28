@@ -1,0 +1,43 @@
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+local.properties
+
+# Gradle
+.gradle/
+build/
+**/build/
+!src/**/build/
+
+# Generated files
+bin/
+gen/
+out/
+release/
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services (keep out of source control)
+google-services.json
+
+# Proguard
+proguard/
+
+# Kotlin
+*.class
+
+# NDK
+obj/
+.externalNativeBuild/
+.cxx/
+
+# Signing config (never commit)
+keystore.properties
+
+# OS files
+Thumbs.db
